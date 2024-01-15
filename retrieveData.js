@@ -2,6 +2,8 @@
 // Import the necessary functions from the Firebase SDK
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+// for authorisation
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 // Firebase config
 const firebaseConfig = {
@@ -16,6 +18,18 @@ const firebaseConfig = {
 
 // Initialise firebase
 const webApp = initializeApp(firebaseConfig);
+
+// Reference Firebase Auth
+const auth = getAuth(webApp);
+
+// Check if user is logged in
+onAuthStateChanged(auth, (user) => {
+    if (!user) {
+        console.log("User not signed in");
+        // Redirect to login page
+        window.location.href = "login.html";
+    }
+});
 
 // Reference contact-submissions data
 const fireDatabase = getDatabase(webApp);
