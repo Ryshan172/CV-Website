@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="mainstyle.css">
+    <title>Ryshan Ramlall CV</title>
+</head>
+
+<body>
+    <header>
+        <h1>Curriculum Vitae: Ryshan Ramlall</h1>
+        <p>Software Developer</p>
+    </header>
+
+    <section id="about_me">
+        <h2>About me</h2>
+        <p>I am a software developer</p>
+        <p>View contact data <a href="viewData.html">Click</a></p>
+
+    </section>
+
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Guitar</li>
+            <li>Writing</li>
+        </ul>
+    </section>
+
+    <section id="contact_me">
+        <h2>Contact me</h2>
+
+        <form id="contactForm" action="/submit_form" method="post">
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" required>
+
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="submit">
+
+
+        </form>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ryshan Ramlall. All rights reserved</p>
+    </footer>
+
+    <script type="module" src="storageFunction.js"></script>
+</body>
+
+
+</html>

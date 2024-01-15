@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="mainstyle.css">
+    <title>View Contact Data</title>
+</head>
+
+<body>
+    <header>
+        <h1>View Contact Data</h1>
+        <p>Displaying retrieved data from the contact form</p>
+    </header>
+
+    <section id="contact_data">
+        <h2>Contact Data</h2>
+        <ul id="contactList">
+            <!-- Display retrieved data here dynamically -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ryshan Ramlall. All rights reserved</p>
+    </footer>
+
+    <!-- Include Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
+
+    <!-- Include your viewData.js script -->
+    <script type="module" src="viewData.js"></script>
+</body>
+
+</html>
