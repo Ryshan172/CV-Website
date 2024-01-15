@@ -1,7 +1,7 @@
 // Import from Fireabase sdk
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
 
 // Firebase config
 const firebaseConfig = {
@@ -47,4 +47,3 @@ document.getElementById("adminLogin").addEventListener("submit", async (event) =
  * password: gizmo198B
  */
 
-export {}
