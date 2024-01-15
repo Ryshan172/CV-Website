@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Stylesheet-->
     <link rel="stylesheet" href="mainstyle.css">
     <title>View Contact Data</title>
 </head>
@@ -15,9 +14,9 @@
         <p>Displaying retrieved data from the contact form</p>
     </header>
 
-    <section id="contact_data">
+    <section id="submission_data">
         <h2>Contact Data</h2>
-        <ul id="contactList">
+        <ul id="submissionsList">
             <!-- Display retrieved data here dynamically -->
         </ul>
     </section>
@@ -30,8 +29,8 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
 
-    <!-- Include your viewData.js script -->
-    <script type="module" src="viewData.js"></script>
+    <!--Data retrieval script-->
+    <script type="module" src="retrieveData.js"></script>
 </body>
 
 </html>
