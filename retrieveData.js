@@ -1,7 +1,7 @@
 // Import firebase Functions
 // Import the necessary functions from the Firebase SDK
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+import { getDatabase, ref, onValue, remove } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 // for authorisation
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
@@ -35,6 +35,19 @@ onAuthStateChanged(auth, (user) => {
 const fireDatabase = getDatabase(webApp);
 const submissionsRef = ref(fireDatabase, "contact-submissions");
 
+// Function to delete an entry
+function deleteEntry(key) {
+    // Remove the entry from the database using its key
+    remove(ref(submissionsRef, key))
+        .then(() => {
+            console.log("Entry deleted successfully");
+        })
+        .catch((error) => {
+            console.error("Error deleting entry:", error);
+        });
+}
+
+
 // Retrieve and display data 
 function showContactFormData(snapshot) {
 
@@ -48,15 +61,33 @@ function showContactFormData(snapshot) {
     snapshot.forEach((childSnapshot) => {
         const submissionData = childSnapshot.val();
         const listItem = document.createElement("li");
-        listItem.textContent = 
-        `Name: ${submissionData.contactName},
-         Email: ${submissionData.contactEmail},
-         Message: ${submissionData.formMessage}`;
 
+        
+        // Display name and email above the message
+        const fromInfo = document.createElement("p");
+        fromInfo.textContent = `From: ${submissionData.contactName}, ${submissionData.contactEmail}`;
+        listItem.appendChild(fromInfo);
+
+        // Display the message
+        const messageInfo = document.createElement("p");
+        messageInfo.textContent = `Message: ${submissionData.formMessage}`;
+        listItem.appendChild(messageInfo);
+
+        /**
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        //deleteButton.addEventListener("click", ()=> deleteEntry(childSnapshot.key));
+        deleteButton.addEventListener("click", () => deleteEntry(childSnapshot.key));
+
+        // Append items to list 
+        listItem.appendChild(deleteButton);
+        
+        */
         submissionsList.append(listItem);
     });
 
 }
+
 
 // Using a Listener for changes in the 'contact-submissions' data
 onValue(submissionsRef, showContactFormData, {
