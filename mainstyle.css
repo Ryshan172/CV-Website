@@ -74,3 +74,15 @@ footer {
     margin: 5px; /* Optional: Adds some space between the images */
     display: inline-block;
 }
+
+
+.button-container {
+    text-align: right; /* Optional: Centers the images horizontally */
+}
+
+.button-container img {
+    /* width: 200px;
+    height: 150px; */
+    margin: 5px; /* Optional: Adds some space between the images */
+    display: inline-block;
+}
