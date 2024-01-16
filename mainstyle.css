@@ -148,3 +148,16 @@ footer {
 #contactForm input[type="submit"]:hover {
     background-color: #45a049;
 }
+
+#about_me {
+    text-align: left;
+}
+
+#about_me p {
+    max-width: 600px;
+    /* Set your preferred maximum width */
+    margin: 0 auto;
+    /* Center the paragraph horizontally */
+    line-height: 1.5;
+    /* Adjust line height for better readability */
+}

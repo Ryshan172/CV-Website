@@ -5,13 +5,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 
 // Firebase config
 const firebaseConfig = {
-    apiKey: "AIzaSyAtWKJhSETEhPXPkOMXuhpqthnXxB4_81c",
-    authDomain: "cv-website-48baa.firebaseapp.com",
-    projectId: "cv-website-48baa",
-    storageBucket: "cv-website-48baa.appspot.com",
-    messagingSenderId: "868736333428",
-    appId: "1:868736333428:web:20a52608554e37868d8321",
-    measurementId: "G-VHDGLCVYF1"
+    apiKey: "AIzaSyD1jZUOQDcL6A8Dq8mQnmZoOFSmPv3o29o",
+    authDomain: "cv-website-project.firebaseapp.com",
+    projectId: "cv-website-project",
+    storageBucket: "cv-website-project.appspot.com",
+    messagingSenderId: "328803555280",
+    appId: "1:328803555280:web:d6e1f56cfc563b1dd68bd5",
+    measurementId: "G-P4HV2PTTSG"
 };
 
 
