@@ -64,4 +64,20 @@ onValue(submissionsRef, showContactFormData, {
     onlyOnce : true
 });
 
+// Logout button
+const logoutButton = document.getElementById('logoutButton');
+
+// Add event listener to the logout button
+logoutButton.addEventListener('click', () => {
+    signOut(auth)
+        .then(() => {
+            console.log('User signed out successfully');
+            // Redirect to the login page or perform any other action
+            window.location.href = "index.html";
+        })
+        .catch((error) => {
+            console.error('Error signing out:', error);
+        });
+});
+
 export {webApp, showContactFormData};

@@ -58,3 +58,19 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.menu {
+    position: absolute; 
+    right: 20px;
+}
+
+.image-container {
+    text-align: center; /* Optional: Centers the images horizontally */
+}
+
+.image-container img {
+    /* width: 200px;
+    height: 150px; */
+    margin: 5px; /* Optional: Adds some space between the images */
+    display: inline-block;
+}
