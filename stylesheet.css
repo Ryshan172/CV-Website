@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    font-size: 20px;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
@@ -18,6 +19,7 @@ h1 {
 
 h2 {
     color: navy;
+    text-align: center;
 }
 
 section {
@@ -25,6 +27,7 @@ section {
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
+
 }
 
 ul {
@@ -34,6 +37,7 @@ ul {
 
 li {
     margin-bottom: 8px;
+
 }
 
 form {
@@ -159,6 +163,19 @@ footer {
 
 }
 
+#hobbies {
+    text-align: left;
+}
+
+#hobbies p {
+    max-width: 600px;
+    /* Centre paragraph horizontally */
+    margin: 0 auto;
+    /* Adjust line height for readability */
+    line-height: 1.5;
+
+}
+
 
 /*Login form styling*/
 #Login {
@@ -214,7 +231,89 @@ footer {
     /* Adjusting contact form for smaller screens */
     #contactForm {
         max-width: 100%;
-       
+
     }
 
+}
+
+
+/*Timeline for education*/
+.timeline-section {
+    text-align: center;
+    /* Center the text */
+}
+
+.timeline-section h2 {
+    color: navy;
+}
+
+.timeline-list {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    /* Centers items vertically */
+    margin-bottom: 20px;
+    max-width: 400px;
+    text-align: left;
+    /*So it does not spill over to next line*/
+    white-space: nowrap;
+}
+
+.timeline-item::before {
+    content: "";
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #3498db;
+    /* Change color as needed */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.timeline-item:nth-child(2)::before {
+    background-color: #e74c3c;
+    /* Different color for the second item */
+}
+
+.timeline-item:nth-child(3)::before {
+    background-color: #2ecc71;
+    /* Different color for the third item */
+}
+
+.timeline-item:nth-child(4)::before {
+    background-color: #f39c12;
+    /* Different color for the fourth item */
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+}
+
+.holder ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.holder ul li::before {
+    content: "\2022";
+    /* Unicode character for a black dot */
+    color: black;
+    display: inline-block;
+    font-size: 1.5em;
+    width: 1em;
+    margin-left: -1em;
+    /* Negative margin to overlap with the list item text */
 }
