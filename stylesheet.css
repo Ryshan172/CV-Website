@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #fff;
+}
+
+h2 {
+    color: navy;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    padding-bottom: 40px;
+}
+
+/* Add a bottom margin to the contact section */
+#contact {
+    margin-bottom: 60px;
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.menu {
+    position: absolute;
+    right: 20px;
+}
+
+.image-container {
+    text-align: center;
+
+}
+
+.image-container img {
+    /* width: 200px;
+    height: 150px; */
+    margin: 5px;
+    /* Adds some space between the images */
+    display: inline-block;
+}
+
+.button-container {
+    text-align: right;
+
+}
+
+.button-container img {
+    /* width: 200px;
+    height: 150px; */
+    margin: 5px;
+    /* Adds some space between the images */
+    display: inline-block;
+}
+
+#submission_data {
+    text-align: left;
+    margin: 20px;
+}
+
+#submissionsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#submissionsList li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#submissionsList li button {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#contact_me {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Add margin at the bottom */
+}
+
+#contactForm {
+    max-width: 400px;
+    /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    /* Center the form horizontally */
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#contactForm input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+#contactForm input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#about_me {
+    text-align: left;
+}
+
+#about_me p {
+    max-width: 600px;
+    /* Centre paragraph horizontally */
+    margin: 0 auto;
+    /* Adjust line height for readability */
+    line-height: 1.5;
+
+}
+
+
+/*Login form styling*/
+#Login {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Add margin at the bottom */
+}
+
+#adminLogin {
+    max-width: 400px;
+    /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    /* Center the form horizontally */
+}
+
+#adminLogin label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#adminLogin input,
+#adminLogin textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#adminLogin input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+#adminLogin input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+
+    /* Adjusting for smaller screens */
+    #about_me p {
+        max-width: 100%;
+
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Adjusting contact form for smaller screens */
+    #contactForm {
+        max-width: 100%;
+       
+    }
+
+}
