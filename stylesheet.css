@@ -11,6 +11,8 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px;
+    /*To prevent cut-off*/
+    word-wrap: break-word;
 }
 
 h1 {
@@ -60,6 +62,8 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    /*To prevent cut-off*/
+    word-wrap: break-word;
 }
 
 .menu {
@@ -260,7 +264,6 @@ footer {
     max-width: 400px;
     text-align: left;
     /*So it does not spill over to next line*/
-    white-space: nowrap;
 }
 
 .timeline-item::before {
@@ -316,4 +319,38 @@ footer {
     width: 1em;
     margin-left: -1em;
     /* Negative margin to overlap with the list item text */
+}
+
+/*Style for projects section*/
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    /* Add margin to the top for spacing */
+}
+
+.project-gallery img {
+    width: 200px;
+    /* Adjust the width as needed */
+    height: 150px;
+    /* Adjust the height as needed */
+    margin: 10px;
+    /* Adjust the margin as needed */
+}
+
+.project-desc {
+    text-align: left;
+}
+
+.project-desc p {
+    max-width: 600px;
+    /* Centre paragraph horizontally */
+    margin: 0 auto;
+    /* Adjust line height for readability */
+    line-height: 1.5;
+    margin-bottom: 1%;
+
 }
