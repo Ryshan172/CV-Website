@@ -62,6 +62,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: small;
     /*To prevent cut-off*/
     word-wrap: break-word;
 }
