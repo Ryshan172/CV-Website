@@ -21,41 +21,42 @@ const firabaseAnalytics = getAnalytics(webApp);
 
 // Handling the form submission
 function handleContactForm(event) {
-  event.preventDefault();
 
-  // Get input values
-  const contactName = document.getElementById('name').value;
-  const contactEmail = document.getElementById('email').value;
-  const formMessage = document.getElementById('message').value;
+    event.preventDefault();
 
-  // Email validation regular expression
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Get input values
+    const contactName = document.getElementById('name').value;
+    const contactEmail = document.getElementById('email').value;
+    const formMessage = document.getElementById('message').value;
 
-  // Check if the email is valid
-  if (!emailRegex.test(contactEmail)) {
-      alert('Please enter a valid email address');
-      // Stop if it is not valid 
-      return; 
-  }
+    // Email validation regular expression
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Storing the data in the realtime database
-  const fireDatabase = getDatabase();
-  const storageReference = ref(fireDatabase, 'contact-submissions');
+    // Check if the email is valid
+    if (!emailRegex.test(contactEmail)) {
+        alert('Please enter a valid email address');
+        // Stop if it is not valid 
+        return; 
+    }
 
-  push(storageReference, {
-      contactName,
-      contactEmail,
-      formMessage,
-  })
-  .then(() => {
-      // Give notification
-      alert('Your message has been sent successfully');
-  })
-  .catch((error) => {
-      // Show that an error has occurred
-      console.error('Error saving contact form data', error);
-      alert('Your message was not sent');
-  });
+    // Storing the data in the realtime database
+    const fireDatabase = getDatabase();
+    const storageReference = ref(fireDatabase, 'contact-submissions');
+
+    push(storageReference, {
+        contactName,
+        contactEmail,
+        formMessage,
+    })
+    .then(() => {
+        // Give notification
+        alert('Your message has been sent successfully');
+    })
+    .catch((error) => {
+        // Show that an error has occurred
+        console.error('Error saving contact form data', error);
+        alert('Your message was not sent');
+    });
 }
 
 
