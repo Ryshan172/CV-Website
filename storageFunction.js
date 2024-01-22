@@ -34,7 +34,7 @@ function handleContactForm(event) {
   // Check if the email is valid
   if (!emailRegex.test(contactEmail)) {
       alert('Please enter a valid email address');
-      // Stop if it not valid 
+      // Stop if it is not valid 
       return; 
   }
 

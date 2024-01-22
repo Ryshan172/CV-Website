@@ -122,14 +122,13 @@ footer {
 #contact_me {
     text-align: center;
     margin-bottom: 20px;
-    /* Add margin at the bottom */
+
 }
 
 #contactForm {
     max-width: 400px;
-    /* Adjust the maximum width as needed */
+    /* Centers the form horizontally */
     margin: 0 auto;
-    /* Center the form horizontally */
 }
 
 #contactForm label {
@@ -174,7 +173,7 @@ footer {
 
 #hobbies p {
     max-width: 600px;
-    /* Centre paragraph horizontally */
+    /* Centres paragraph horizontally */
     margin: 0 auto;
     /* Adjust line height for readability */
     line-height: 1.5;
@@ -191,9 +190,9 @@ footer {
 
 #adminLogin {
     max-width: 400px;
-    /* Adjust the maximum width as needed */
+    /*Centres horizontally*/
     margin: 0 auto;
-    /* Center the form horizontally */
+
 }
 
 #adminLogin label {
@@ -312,34 +311,33 @@ footer {
 }
 
 .holder ul li::before {
-    content: "\2022";
     /* Unicode character for a black dot */
+    content: "\2022";
     color: black;
     display: inline-block;
     font-size: 1.5em;
     width: 1em;
-    margin-left: -1em;
     /* Negative margin to overlap with the list item text */
+    margin-left: -1em;
+
 }
 
-/*Style for projects section*/
 
+/*Style for projects section*/
 .project-gallery {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    /* Added margin to the top for spacing */
     margin-top: 20px;
-    /* Add margin to the top for spacing */
+
 }
 
 .project-gallery img {
     width: 200px;
-    /* Adjust the width as needed */
     height: 150px;
-    /* Adjust the height as needed */
     margin: 10px;
-    /* Adjust the margin as needed */
 }
 
 .project-desc {
