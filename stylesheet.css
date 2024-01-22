@@ -355,3 +355,16 @@ footer {
     margin-bottom: 1%;
 
 }
+
+/*Style for video*/
+.video-container {
+    text-align: center;
+  }
+
+.video-container iframe {
+    display: inline-block;
+}
+
+
+
+  

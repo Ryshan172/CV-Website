@@ -5,13 +5,14 @@ import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.7.
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyD1jZUOQDcL6A8Dq8mQnmZoOFSmPv3o29o",
-    authDomain: "cv-website-project.firebaseapp.com",
-    projectId: "cv-website-project",
-    storageBucket: "cv-website-project.appspot.com",
-    messagingSenderId: "328803555280",
-    appId: "1:328803555280:web:d6e1f56cfc563b1dd68bd5",
-    measurementId: "G-P4HV2PTTSG"
+    apiKey: "AIzaSyAtWKJhSETEhPXPkOMXuhpqthnXxB4_81c",
+    authDomain: "cv-website-48baa.firebaseapp.com",
+    databaseURL: "https://cv-website-48baa-default-rtdb.firebaseio.com",
+    projectId: "cv-website-48baa",
+    storageBucket: "cv-website-48baa.appspot.com",
+    messagingSenderId: "868736333428",
+    appId: "1:868736333428:web:20a52608554e37868d8321",
+    measurementId: "G-VHDGLCVYF1"
 };
 
 // Initialise firebase functions
@@ -20,41 +21,41 @@ const firabaseAnalytics = getAnalytics(webApp);
 
 // Handling the form submission
 function handleContactForm(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    // Get input values
-    const contactName = document.getElementById('name').value;
-    const contactEmail = document.getElementById('email').value;
-    const formMessage = document.getElementById('message').value;
+  // Get input values
+  const contactName = document.getElementById('name').value;
+  const contactEmail = document.getElementById('email').value;
+  const formMessage = document.getElementById('message').value;
 
-    // Email validation regular expression
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Email validation regular expression
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Check if the email is valid
-    if (!emailRegex.test(contactEmail)) {
-        alert('Please enter a valid email address');
-        // Stop if it not valid 
-        return; 
-    }
+  // Check if the email is valid
+  if (!emailRegex.test(contactEmail)) {
+      alert('Please enter a valid email address');
+      // Stop if it not valid 
+      return; 
+  }
 
-    // Storing the data in the realtime database
-    const fireDatabase = getDatabase();
-    const storageReference = ref(fireDatabase, 'contact-submissions');
+  // Storing the data in the realtime database
+  const fireDatabase = getDatabase();
+  const storageReference = ref(fireDatabase, 'contact-submissions');
 
-    push(storageReference, {
-        contactName,
-        contactEmail,
-        formMessage,
-    })
-    .then(() => {
-        // Give notification
-        alert('Your message has been sent successfully');
-    })
-    .catch((error) => {
-        // Show that an error has occurred
-        console.error('Error saving contact form data', error);
-        alert('Your message was not sent');
-    });
+  push(storageReference, {
+      contactName,
+      contactEmail,
+      formMessage,
+  })
+  .then(() => {
+      // Give notification
+      alert('Your message has been sent successfully');
+  })
+  .catch((error) => {
+      // Show that an error has occurred
+      console.error('Error saving contact form data', error);
+      alert('Your message was not sent');
+  });
 }
 
 
