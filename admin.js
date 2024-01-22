@@ -43,8 +43,4 @@ document.getElementById("adminLogin").addEventListener("submit", async (event) =
 
 });
 
-/**
- * Email: admin@mail.com
- * password: gizmo198B
- */
 
